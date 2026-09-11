@@ -44,3 +44,4 @@ models:
 
 vars:
   usd_to_eur_rate: 0.86
+  v_min_order: 850
