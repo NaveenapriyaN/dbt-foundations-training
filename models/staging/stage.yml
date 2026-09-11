@@ -1,5 +1,6 @@
 models:
   - name: stg_nations
+    description: "Nation information table"
     columns:
       - name: nation_id
         data_tests:
@@ -7,6 +8,7 @@ models:
           - not_null
 
   - name: stg_regions
+    description: "Region Informations table"
     columns:
       - name: name
         data_tests:
