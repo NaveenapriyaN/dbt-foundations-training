@@ -32,6 +32,6 @@ sources:
       
   - name: ext_murali
     database: ANALYTICS
-    schema: dbt_murali
+    schema: dbt_naveena
     tables:
       - name: supplier_names
