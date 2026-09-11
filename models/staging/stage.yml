@@ -12,7 +12,7 @@ models:
         data_tests:
           - accepted_values:
               arguments:
-                values: ['AFRICA', 'ASIA', 'EUROPE', 'AMERICA', 'MIDDLE EAST']
+                values: ['AFRICA', 'ASIA', 'EUROPE', 'AMERICA']
               config:
                 store_failures: true
 
@@ -23,6 +23,6 @@ models:
         data_tests:
           - order_values:
               arguments:
-                val: 800
+                val: "{{ var('v_min_order') }}"
               config:     
                 store_failures: true
