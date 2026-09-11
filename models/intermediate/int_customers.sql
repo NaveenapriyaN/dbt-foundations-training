@@ -1,3 +1,5 @@
+{{ config(materialized='incremental', unique_key='') }}
+
 with customer as (select * from {{ ref('stg_customers') }}),
 nation as (select * from {{ ref('stg_nations') }}),
 region as (select * from {{ ref('stg_regions') }})

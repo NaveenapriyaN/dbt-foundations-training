@@ -6,27 +6,32 @@ sources:
     tables:
       - name: customers
       - name: nations
+        columns:
+          -  name: n_nationkey
+             data_tests:
+              -  unique
+              -  not_null
+        
       - name: regions
+        description: Raw data for regions
       - name: lineitems
-        config:
-          freshness:
-            warn_after: 
-              count:
-              period: day
-            error_after: 
-              count:
-              period: day
-          loaded_at_field: l_shipdate::timestamp_ntz
+        
       - name: orders
         config:
           freshness:
             warn_after: 
-              count: 1527
+              count: 154
               period: day
             error_after: 
-              count: 153
+              count: 300
               period: day
           loaded_at_field: o_orderdate::timestamp_ntz
       - name: parts
       - name: partsupps
       - name: suppliers
+      
+  - name: ext_murali
+    database: ANALYTICS
+    schema: dbt_murali
+    tables:
+      - name: supplier_names
