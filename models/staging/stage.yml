@@ -17,10 +17,12 @@ models:
                 store_failures: true
 
   - name: stg_orders
+    description: Order Information Table
     columns:
       - name: total_price
         data_tests:
           - order_values:
+              description: Testing Order Values
               arguments: 
                 val: 880
               config:     

@@ -7,16 +7,9 @@ sources:
       - name: customers
       - name: nations
       - name: regions
+        description: Raw data for regions
       - name: lineitems
-        config:
-          freshness:
-            warn_after: 
-              count:
-              period: day
-            error_after: 
-              count:
-              period: day
-          loaded_at_field: l_shipdate::timestamp_ntz
+        
       - name: orders
         config:
           freshness:
