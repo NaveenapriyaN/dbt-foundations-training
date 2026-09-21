@@ -1,16 +1,16 @@
 default:
   outputs:
-      dev:
-        account: GDB59425
-        database: analytics
-        password: Naveenapriya13@
-        role: analyticsengineer
-        schema: dbt_sachin
-        threads: 1
-        type: snowflake
-        user: NAVEENAPRIYA
-        warehouse: transform_wh
-    target: dev
+    dev:
+      account: GDB59425
+      database: analytics
+      password: Naveenapriya13@
+      role: analyticsengineer
+      schema: dbt_sachin
+      threads: 1
+      type: snowflake
+      user: NAVEENAPRIYA
+      warehouse: transform_wh
+  target: dev
 
 ibm_core:
   outputs:
@@ -25,7 +25,6 @@ ibm_core:
       user: "{{ env_var('SNOWFLAKE_USER') }}"
       warehouse: transform_wh
   target: dev
-
 
 Banking_Project:
   outputs:
