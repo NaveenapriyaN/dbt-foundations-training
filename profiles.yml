@@ -1,0 +1,42 @@
+default:
+  outputs:
+      dev:
+        account: GDB59425
+        database: analytics
+        password: Naveenapriya13@
+        role: analyticsengineer
+        schema: dbt_sachin
+        threads: 1
+        type: snowflake
+        user: NAVEENAPRIYA
+        warehouse: transform_wh
+    target: dev
+
+ibm_core:
+  outputs:
+    dev:
+      account: FOAPZGD-GDB59425
+      database: analytics
+      password: "{{ env_var('SNOWFLAKE_PASSWORD') }}"
+      role: analyticsengineer
+      schema: dbt_sachin
+      threads: 1
+      type: snowflake
+      user: "{{ env_var('SNOWFLAKE_USER') }}"
+      warehouse: transform_wh
+  target: dev
+
+
+Banking_Project:
+  outputs:
+    dev:
+      account: BXQKRAL-HTB51610
+      database: BANK360_PROJECT
+      password: dbt@password
+      role: BANK360_ROLE
+      schema: STAGING
+      threads: 4
+      type: snowflake
+      user: DBT_USER
+      warehouse: BANK_WH
+  target: dev
